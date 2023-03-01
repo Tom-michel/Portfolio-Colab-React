@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: Poppins;
+  src: "src/components/data/fonts/Poppins-Regular.ttf";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  /* font-family: "Poppins"; */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --primaryBackground: #212222;
+  --secondaryBackground: #2f3030;
+  --primaryColor: #e0a80d;
+  --greyDark: #7d8792;
+  --headingColor:#2d2e2e;
+  --white: #fff;
+  --black: #000;
+  --sliver: #bac8d3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: var(--headingColor);
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: var(--greyDark);
+  text-decoration: none;
+  transition: 0.5s;
+}
+a:hover {
+  color: var(--primaryColor);
+}
+
+p {
+  color: var(--sliver);
+  font-size: 15px;
+  line-height: 30;
+  margin: 20px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+
+.flexsb {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 17px;background-color: var(--primaryColor);
+  color: var(--white);
+  padding: 15px 50px;
+  border-radius: 50px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ===================== header ===================== */
+header {
+  background-color: var(--headingColor);
+  height: 10vh;
+  line-height: 10vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+header a {
+  margin-left: 40px;
+}
+
+.toggle {
+  cursor: pointer;
+  color: var(--white);
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header .nav {
+    display:  none;
   }
-  to {
-    transform: rotate(360deg);
+  header a {
+    width: 100%;
+    display: block;
+  }
+  .toggle {
+    display: block;
+    background: none;
+    font-size: 25px;
+  }
+  .hideMenu {
+    display: block;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: var(--headingColor);
   }
 }
+/* ===================== header ===================== */
+
+
