@@ -1,4 +1,5 @@
 import React from 'react'
+import CountUp from 'react-countup'
 import { project } from '../data/dummydata'
 
 export const Counter = () => {
@@ -9,7 +10,9 @@ export const Counter = () => {
           {project.map((item, i) => (
             <div className="box">
               <i>{item.icon}</i>
-              <h1 className='heading'>{item.num}</h1>
+              <h1 className='heading'>
+                <CountUp enableScrollSpy duration={2} end={item.num} />
+              </h1>
               <h3>{item.title}</h3>
             </div>
           ))}

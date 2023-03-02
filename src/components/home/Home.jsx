@@ -2,7 +2,8 @@ import React from 'react'
 import { About } from '../pages/About'
 import { Counter } from '../pages/Counter'
 import { Hero } from './Hero'
-import { Services } from './Services'
+import { Services } from '../pages/Services'
+import { Portfolio } from '../pages/Portfolio'
 
 export const Home = () => {
   return (
@@ -11,6 +12,7 @@ export const Home = () => {
       <About />
       <Services />
       <Counter />
+      <Portfolio />
     </>
   )
 }
