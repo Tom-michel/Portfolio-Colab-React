@@ -9,6 +9,7 @@ import { Home } from '../home/Home';
 import { Services } from './Services';
 import { About } from './About';
 import { Portfolio } from './Portfolio';
+import { Testimonials } from './Testimonials';
 
 export const Pages = () => {
   return <>
@@ -19,6 +20,7 @@ export const Pages = () => {
         <Route exact path="/about" component={About} />
         <Route exact path="/services" component={Services} />
         <Route exact path="/portfolio" component={Portfolio} />
+        <Route exact path="/testimonials" component={Testimonials} />
       </Switch>
     </Router>
   </>
