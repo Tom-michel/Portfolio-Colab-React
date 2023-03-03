@@ -15,7 +15,7 @@
   --secondaryBackground: #2f3030;
   --primaryColor: #e0a80d;
   --greyDark: #7d8792;
-  --headingColor:#2d2e2e;
+  --headingColor: #2d2e2e;
   --white: #fff;
   --black: #000;
   --sliver: #bac8d3;
@@ -43,7 +43,12 @@ p {
   margin: 20px 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 500;
 }
 
@@ -61,7 +66,8 @@ button {
   border: none;
   outline: none;
   background: none;
-  font-size: 17px;background-color: var(--primaryColor);
+  font-size: 17px;
+  background-color: var(--primaryColor);
   color: var(--white);
   padding: 15px 50px;
   border-radius: 50px;
@@ -73,7 +79,6 @@ button {
   background: none;
   border: 2px solid var(--primaryColor);
 }
-
 
 /* ===================== header ===================== */
 header {
@@ -98,7 +103,7 @@ header a {
 
 @media screen and (max-width: 768px) {
   header .nav {
-    display:  none;
+    display: none;
   }
   header a {
     width: 100%;
@@ -122,7 +127,7 @@ header a {
 
 section {
   /* height: 90vh; */
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -216,7 +221,7 @@ section {
 
 /* ===================== counter ===================== */
 .counter {
-  margin-top:  80px;
+  margin-top: 80px;
   position: relative;
 }
 .hero.counter::after {
@@ -290,6 +295,8 @@ article .box:hover .overlay::after {
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  margin-bottom: 0;
 }
 .testimonials::after {
   background-image: url("../public/images/testimonials-bg.png");
@@ -329,3 +336,87 @@ label {
 }
 /* ===================== testimonials ===================== */
 
+/* ===================== blog ===================== */
+.blog {
+  padding-top: 50px;
+}
+.blog img {
+  width: 100%;
+}
+.blog .box {
+  background-color: var(--primaryBackground);
+  border-radius: 10px;
+}
+.blog .box .text {
+  padding: 10px 30px;
+}
+/* ===================== blog ===================== */
+
+/* ===================== contact ===================== */
+.contact {
+  margin: 20px 0;
+}
+.contact .right,
+.contact .left {
+  padding: 20px;
+}
+.contact .flex input:nth-child(1) {
+  margin-right: 10px;
+}
+.contact button,
+.contact textarea,
+.contact input {
+  width: 100%;
+  padding: 20px;
+  bottom: none;
+  outline: none;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+/* ===================== contact ===================== */
+
+/* ===================== footer ===================== */
+footer {
+  text-align: center;
+  background-color: var(--primaryBackground);
+  padding: 100px 70px 70px;
+}
+footer i {
+  margin: 5px;
+  color: var(--primaryColor);
+}
+/* ===================== footer ===================== */
+
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 50vh;
+  }
+  .hero.banner {
+    height: 50vh;
+  }
+  .heroContainer {
+    max-width: 80%;
+  }
+  .hero::after {
+    height: 60vh;
+  }
+  section {
+    height: auto;
+    padding-top: 50px;
+  }
+  .contact .flexsb,
+  .about .flex {
+    flex-direction: column;
+  }
+  .left,
+  .right {
+    width: 100%;
+  }
+  .grid3,
+  .grid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .blog {
+    margin-top: 100px;
+  }
+}
